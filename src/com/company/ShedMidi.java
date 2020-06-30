@@ -1,4 +1,4 @@
-//import themidibus.MidiBus;
+package com.company;//import themidibus.MidiBus;
 
 import themidibus.*;
 

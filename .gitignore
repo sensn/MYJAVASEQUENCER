@@ -1,2 +1,5 @@
 # Project exclude paths
+
 /out/
+MYPROPHET.sf2
+*.sf2
