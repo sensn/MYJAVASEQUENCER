@@ -1503,7 +1503,7 @@ public class ProjectorSketch extends PApplet{
                     myHouse.rooms[mychannel - 1].prg += 1;
                     //myHouse.rooms[mychannel - 1].bank += 1;
                     shedMidi.sendMidiBank(mychannel, myHouse.rooms[mychannel - 1].bank, myHouse.rooms[mychannel - 1].prg);   //TODO HERE
-                    System.out.println( "86: Chennel: " + mychannel + " bank:" +myHouse.rooms[mychannel - 1].bank+" Prg:" + myHouse.rooms[mychannel - 1].prg);
+                   // System.out.println( "86: Chennel: " + mychannel + " bank:" +myHouse.rooms[mychannel - 1].bank+" Prg:" + myHouse.rooms[mychannel - 1].prg);
                     myHouse.rooms[i].buttons[86].on = false;
                 }
 

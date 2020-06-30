@@ -90,7 +90,7 @@ public class ShedMidi {
             synthRcvr.send(a,0);          //TODO
 
             //println("data sent");
-            System.out.println("CHANNEL: "+thechannel +"NOTE" +thenote + "VELOCITY" +thevelocity );
+          //  System.out.println("CHANNEL: "+thechannel +"NOTE" +thenote + "VELOCITY" +thevelocity );
         }
         catch (Exception e) {
             //  println("error sending midi data");

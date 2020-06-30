@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="MYJAVASEQUENCER:jar2">
+    <output-path>$PROJECT_DIR$/out/artifacts/MYJAVASEQUENCER_jar2</output-path>
+    <root id="archive" name="MYJAVASEQUENCER.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/recources/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="MYJAVASEQUENCER" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/controlP5/library/controlP5.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/core.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/themidibus/library/themidibus.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
