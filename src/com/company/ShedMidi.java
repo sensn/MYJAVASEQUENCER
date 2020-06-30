@@ -5,15 +5,18 @@ import themidibus.*;
 import javax.sound.midi.*;
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLOutput;
 
 
 public class ShedMidi {
     MidiBus myBus; // The MidiBus
     byte[] buffer1 = new byte[3];
 
-    File file = new File("./MYPROPHET.sf2");                         //UNCOMMENT
-    Soundbank soundbank = MidiSystem.getSoundbank(file);             //UNCOMMENT
 
+                            //UNCOMMENT
+
+
+    Soundbank soundbank;
     // Soundbank soundfont = MidiSystem.getSoundbank(("FluidR3_GM.sf2").getInputStream());
     // Sequencer sequencer = MidiSystem.getSequencer();
     Synthesizer synthesizer = MidiSystem.getSynthesizer();
@@ -29,16 +32,28 @@ public class ShedMidi {
     ShortMessage c3  = new ShortMessage(ShortMessage.PROGRAM_CHANGE, 1, 1, 0);
     public ShedMidi() throws MidiUnavailableException, InvalidMidiDataException, IOException {
 
-        synthesizer.open();
+        File file = new File("./MYPROPHET.sf2");
+        if (file.exists()){
+             soundbank = MidiSystem.getSoundbank(file);
+             Soundbank soundbank = MidiSystem.getSoundbank(file);
+             synthesizer.open();
+             synthesizer.loadAllInstruments(soundbank);
+        }else{
+            synthesizer.open();
+        }
 
-        Soundbank soundbank = MidiSystem.getSoundbank(file);
 
 
-        System.out.println( soundbank.getName());
+
+
+        //Soundbank soundbank = MidiSystem.getSoundbank(file);
+
+
+      /*  System.out.println( soundbank.getName());
         System.out.println( soundbank.getDescription());
         System.out.println( soundbank.getInstruments().toString());
-        System.out.println( soundbank.getResources().toString());
-        synthesizer.loadAllInstruments(soundbank);
+        System.out.println( soundbank.getResources().toString());*/
+
         synthRcvr = synthesizer.getReceiver();
 
 
