@@ -4,16 +4,6 @@ import controlP5.ControlEvent;
 import controlP5.ControlP5;
 import processing.core.PApplet;   //Download processing add
 import processing.core.PSurface;
-//import processing.core.PSurface;
-
-
-
-
-import controlP5.ControlP5;
-import processing.core.PApplet;
-import processing.core.PSurface;
-import controlP5.*;
-import processing.core.*;
 public class Mixer extends PApplet {
 
     int angle = 0;
